@@ -1,0 +1,11 @@
+/* AUTOMATICALLY GENERATED ON Tue Jul 31 23:48:17 CEST 2018*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "MenagerieRepository", "findAll,Local,";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "MenagerieRepository", "**";
+};
+

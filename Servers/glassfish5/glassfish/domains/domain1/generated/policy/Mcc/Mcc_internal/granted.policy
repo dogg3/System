@@ -1,0 +1,11 @@
+/* AUTOMATICALLY GENERATED ON Thu Aug 02 16:10:42 CEST 2018*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "PlayerRepository", "findAll,Local,";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "PlayerRepository", "**";
+};
+

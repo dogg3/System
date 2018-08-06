@@ -69,9 +69,9 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
-      <application-ref ref="Menagerie" virtual-servers="server"></application-ref>
-      <application-ref ref="Employee" virtual-servers="server"></application-ref>
       <application-ref ref="Mcc" virtual-servers="server"></application-ref>
+      <application-ref ref="Employee" virtual-servers="server"></application-ref>
+      <application-ref ref="Menagerie" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jdbc/Employee"></resource-ref>
@@ -461,12 +461,12 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
-    <application context-root="/Menagerie" object-type="user" directory-deployed="true" name="Menagerie" location="file:/Users/douglaslandvik/NetBeansProjects/Menagerie/target/Menagerie/">
+    <application context-root="/Mcc" object-type="user" name="Mcc" directory-deployed="true" location="file:/Users/douglaslandvik/NetBeansProjects/Mcc/target/Mcc/">
       <property name="archiveType" value="war"></property>
-      <property name="appLocation" value="file:/Users/douglaslandvik/NetBeansProjects/Menagerie/target/Menagerie/"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="100471505022287872"></property>
-      <property name="defaultAppName" value="Menagerie"></property>
-      <module name="Menagerie">
+      <property name="appLocation" value="file:/Users/douglaslandvik/NetBeansProjects/Mcc/target/Mcc/"></property>
+      <property name="org.glassfish.ejb.container.application_unique_id" value="100481001104736256"></property>
+      <property name="defaultAppName" value="Mcc"></property>
+      <module name="Mcc">
         <engine sniffer="ejb"></engine>
         <engine sniffer="security"></engine>
         <engine sniffer="weld"></engine>
@@ -474,11 +474,13 @@
         <engine sniffer="web"></engine>
       </module>
     </application>
-    <application context-root="/Employee" object-type="user" name="Employee" directory-deployed="true" location="file:/Users/douglaslandvik/NetBeansProjects/Employee/target/Employee/">
+    <application context-root="/Employee" object-type="user" directory-deployed="true" name="Employee" location="file:/Users/douglaslandvik/NetBeansProjects/Employee/target/Employee/">
       <property name="archiveType" value="war"></property>
+      <property name="org.glassfish.ejb.startup.keepstate" value="true"></property>
       <property name="appLocation" value="file:/Users/douglaslandvik/NetBeansProjects/Employee/target/Employee/"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="100481001104343040"></property>
+      <property name="org.glassfish.ejb.container.application_unique_id" value="100503199968198656"></property>
       <property name="defaultAppName" value="Employee"></property>
+      <property name="keepSessions" value="true"></property>
       <module name="Employee">
         <engine sniffer="ejb"></engine>
         <engine sniffer="security"></engine>
@@ -487,12 +489,14 @@
         <engine sniffer="web"></engine>
       </module>
     </application>
-    <application context-root="/Mcc" object-type="user" name="Mcc" directory-deployed="true" location="file:/Users/douglaslandvik/NetBeansProjects/Mcc/target/Mcc/">
+    <application context-root="/Menagerie" object-type="user" name="Menagerie" directory-deployed="true" location="file:/Users/douglaslandvik/NetBeansProjects/Menagerie/target/Menagerie/">
       <property name="archiveType" value="war"></property>
-      <property name="appLocation" value="file:/Users/douglaslandvik/NetBeansProjects/Mcc/target/Mcc/"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="100481001104736256"></property>
-      <property name="defaultAppName" value="Mcc"></property>
-      <module name="Mcc">
+      <property name="org.glassfish.ejb.startup.keepstate" value="true"></property>
+      <property name="appLocation" value="file:/Users/douglaslandvik/NetBeansProjects/Menagerie/target/Menagerie/"></property>
+      <property name="org.glassfish.ejb.container.application_unique_id" value="100504687177433088"></property>
+      <property name="defaultAppName" value="Menagerie"></property>
+      <property name="keepSessions" value="true"></property>
+      <module name="Menagerie">
         <engine sniffer="ejb"></engine>
         <engine sniffer="security"></engine>
         <engine sniffer="weld"></engine>

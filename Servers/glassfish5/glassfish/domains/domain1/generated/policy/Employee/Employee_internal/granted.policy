@@ -1,7 +1,8 @@
-/* AUTOMATICALLY GENERATED ON Thu Aug 02 16:04:19 CEST 2018*/
+/* AUTOMATICALLY GENERATED ON Mon Aug 06 20:14:17 CEST 2018*/
 /* DO NOT EDIT */
 
 grant {
+  permission javax.security.jacc.EJBMethodPermission "EmployeeRepository", "findDepartmentWtihName,Local,";
   permission javax.security.jacc.EJBMethodPermission "EmployeeRepository", "findAll,Local,";
 };
 
